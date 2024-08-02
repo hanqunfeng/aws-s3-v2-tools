@@ -4,7 +4,7 @@
 
     <groupId>io.github.hanqunfeng</groupId>
     <artifactId>aws-s3-v2-tools</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
     <name>aws-s3-v2-tools</name>
 
@@ -170,12 +170,13 @@
             <plugin>
                 <groupId>org.sonatype.central</groupId>
                 <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.4.0</version>
+                <version>0.5.0</version>
                 <extensions>true</extensions>
                 <configuration>
                     <!-- 这里的publishingServerId是在settings.xml中配置的server认证信息 -->
                     <publishingServerId>maven-central</publishingServerId>
-                    <tokenAuth>true</tokenAuth>
+                    <autoPublish>true</autoPublish>
+                    <waitUntil>published</waitUntil>
                     <deploymentName>${project.groupId}:${project.artifactId}:${project.version}</deploymentName>
                 </configuration>
             </plugin>
